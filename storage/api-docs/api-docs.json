@@ -1,0 +1,33 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API DOC BOLSA DE TRABAJO UFG",
+        "description": "Apis para la administracion de empresas de Arte",
+        "version": "1.0"
+    },
+    "paths": {
+        "/arte/index": {
+            "get": {
+                "summary": "Mostrar empresas",
+                "operationId": "b48d713d63320529cf47947e0b35404b",
+                "responses": {
+                    "200": {
+                        "description": "Mostrar todas las empresas."
+                    },
+                    "default": {
+                        "description": "Ha ocurrido un error."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "token": {
+                "type": "apiKey",
+                "name": "Authorization",
+                "in": "header"
+            }
+        }
+    }
+}

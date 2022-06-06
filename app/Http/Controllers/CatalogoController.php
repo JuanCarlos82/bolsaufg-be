@@ -12,6 +12,21 @@ use App\Models\Arte;
 class CatalogoController extends Controller{
 
 //Listando
+
+ /**
+    * @OA\Get(
+    *     path="/arte/index",
+    *     summary="Mostrar empresas",
+    *     @OA\Response(
+    *         response=200,
+    *         description="Mostrar todas las empresas."
+    *     ),
+    *     @OA\Response(
+    *         response="default",
+    *         description="Ha ocurrido un error."
+    *     )
+    * )
+    */
     public function index(){
         $data = arte::all();
         return response($data);
